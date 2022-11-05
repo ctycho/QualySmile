@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <title>Qualy smile</title>
+</head>
+<body>
+    <div class="topWrapper">
+        <div id="header" class="header">
+            <div class="headerInfo">
+                <img src="./img/teeth.svg" alt="" class="header-logo">
+                <div class="comapanyName">
+                    <img src="./img/name.svg" alt="" class="header-name">
+                    <img src="./img/header-sub.svg" alt="" class="header-sub">
+                </div>
+                <div class="companyDesc">Центр эстетической стоматологии<br>и имплантологии</div>
+            </div>
+            <div id="header__burger" class="header__burger hover" onclick="burgerAction(this, 'header__menu')"><span></span></div>
+            <div id="header__menu" class="header__menu">
+                <div><a href="tel:+78432727184" class="menu__number">+7 (843) 272-71-84</a></div>
+                <ul class="menu__items">
+                    <li onclick="clickMenuItem('header__burger', 'header__menu')"><a href="#about__clinic" class="menu__item">О клинике</a></li>
+                    <li onclick="clickMenuItem('header__burger', 'header__menu')"><a href="#advantage" class="menu__item">Преимущества</a></li>
+                    <li onclick="clickMenuItem('header__burger', 'header__menu')"><a href="#opport" class="menu__item">Возможности</a></li>
+                    <!-- <li><a href="" class="menu__item">Специалисты</a></li>
+                    <li><a href="" class="menu__item">Отзывы</a></li>
+                    <li><a href="" class="menu__item">Рейтинг в отзовиках</a></li>
+                    <li><a href="" class="menu__item">Фотографии</a></li> -->
+                    <li onclick="clickMenuItem('header__burger', 'header__menu')"><a href="#services" class="menu__item">Все услуги</a></li>
+                    <li onclick="clickMenuItem('header__burger', 'header__menu')"><a href="#back_call" class="menu__item">Записаться на консультацию</a></li>
+                </ul>
+            </div>
+            <div class="headerGradient"></div>
+            <div class="headerContact">
+                <a href="tel:+78432727184" class="headerNumber hover">+7 (843) 272-71-84</a>
+                <div class="headerButton hover"><a href="#back_call">Обратный звонок</a></div>
+            </div>
+        </div>
+        <div id="mainBlock" class="mainBlock">
+            <div class="mainInfo">
+                <div class="title">Qualy smile - это<br><span>качественное лечение<br>зубов в Казани</span></div>
+                <div class="text">Запишись на бесплатную консультацию<br><span>и получи подробный план лечения зубов<br>от квалифицированных специалистов</span></div>
+                <div class="signUp"><a href="#back_call">Записаться на консультацию</a></div>
+            </div>
+            <div class="mainTeeth">
+                <div class="backGradient"></div>
+                <div class="icon"><img src="./img/mainTeeth.png" alt="" class="main__teeth"></div>
+            </div>
+        </div>
+    </div>
+    <div class="runLine-wrapper">
+        <div class="runLine"></div>
+    </div>
+    <div class="aboutUs">
+        <div class="left-side">
+            <img src="./img/office.png" alt="" class="image">
+        </div>
+        <div class="right-side">
+            <div class="aboutus_title">О нашей<br><span>стоматологии</span></div>
+            <div class="aboutus_text">Qualy smile - это полный спектр стоматологических услуг для тех, кто ценит качество, опыт и высокий уровень сервиса.</div>
+            <div class="aboutus_sub-text">Кабинеты оборудованы самым новым и современным оборудованием. У нас работают лучшие специалисты в своей сфере.</div>
+            <div class="info-blocks">
+                <div class="block">
+                    <div class="text"><span>Адрес:</span><br>ул. Спортивная 33,<br>г. Казань</div>
+                </div>
+                <div class="block">
+                    <div class="text"><span>График работы:</span><br>Пн-Пт: 9:00-20:00<br>Сб: 9:00-16:00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about__clinic" class="aboutus_mob">
+        <div class="aboutus_title">О нашей<span>&nbsp;стоматологии</span></div>
+        <img src="./img/office.png" alt="" class="image">
+        <div class="aboutus_text">Qualy smile - это полный спектр стоматологических услуг для тех, кто ценит качество, опыт и высокий уровень сервиса.</div>
+        <div class="aboutus_sub-text">Кабинеты оборудованы самым новым и современным оборудованием. У нас работают лучшие специалисты в своей сфере.</div>
+        <div class="info-blocks">
+            <div class="block">
+                <div class="text"><span>Адрес:</span><br>ул. Спортивная 33,<br>г. Казань</div>
+            </div>
+            <div class="block">
+                <div class="text"><span>График работы:</span><br>Пн-Пт: 9:00-20:00<br>Сб: 9:00-16:00</div>
+            </div>
+        </div>
+    </div>
+    <div id="advantage" class="advantage">
+        <div class="header-one advantage__header">
+            <span>Наши преимущества</span>
+            <div class="adv__header-mob-icon"><img src="./img/haf-teeth.png" alt="" class="adv__teeth-mob"></div>
+
+        </div>
+        <div class="adv-content">
+            <div class="adv-column">
+                <div class="adv-block text__left">
+                    <div class="adv-block__title">Современное оборудование</div>
+                    <div class="adv-block__text">Мы используем профессиональное новейшее оборудование</div>
+                </div>
+                <div class="adv-block text__left">
+                    <div class="adv-block__title">Большой спектр услуг</div>
+                    <div class="adv-block__text">У нас широкий выбор услуг. Мы делаем все для здоровья ваших зубов</div>
+                </div>
+                <div class="adv-block text__left">
+                    <div class="adv-block__title">Доступные цены</div>
+                    <div class="adv-block__text">Работаем по умеренным ценам. Регулярно проводим скидки и акции</div>
+                </div>
+            </div>
+            <div class="adv-column adv-column_center">
+                <div class="adv-img">
+                    <img src="./img/teeth-back.png" alt="" class="adv-back_img">
+                    <img src="./img/зуб.png" alt="" class="adv-teeth_img">
+                </div>
+            </div>
+            <div class="adv-column">
+                <div class="adv-block text__right">
+                    <div class="adv-block__title">Высокая квалификация</div>
+                    <div class="adv-block__text">С вами работают только опытные специалисты</div>
+                </div>
+                <div class="adv-block text__right">
+                    <div class="adv-block__title">Стерильность и безопасность</div>
+                    <div class="adv-block__text">Мы проводим санитарную обработку после каждого пациента</div>
+                </div>
+                <div class="adv-block text__right">
+                    <div class="adv-block__title">Гарантированный результат</div>
+                    <div class="adv-block__text">На большинство наших услуг мы даем долгосрочную гарантию</div>
+                </div>
+            </div>
+        </div>
+        <div class="adv-btn__wrp">
+            <div class="adv-btn">Записаться на консультацию</div>
+        </div>
+    </div>
+    <div id="opport" class="opport">
+        <div class="header-one">Наши возможности</div>
+        <div class="opp-content">
+            <div class="opp-block">
+                <img src="./img/image-43.png" alt="" class="opp-img">
+                <div class="opp-block__title">3D томограф</div>
+            </div>
+            <div class="opp-block">
+                <img src="./img/image-44.png" alt="" class="opp-img">
+                <div class="opp-block__title">Операционный<br>микроскоп</div>
+            </div>
+            <div class="opp-block">
+                <img src="./img/image-47.png" alt="" class="opp-img">
+                <div class="opp-block__title">Современные<br>имплантационные<br>системы</div>
+            </div>
+            <div class="opp-block">
+                <img src="./img/image-48.png" alt="" class="opp-img">
+                <div class="opp-block__title">Индивидуальный<br>подход к пациенту</div>
+            </div>
+        </div>
+    </div>
+    <div id="services" class="services-wrp">
+        <!-- <div class="serv-gradient"></div> -->
+        <div class="services">
+            <div class="serv-top">
+                <div class="header-one serv-header">Наши услуги</div>
+                <div class="serv-top__all serv__hide">Посмотреть все услуги <img src="./img/serv-arrow.svg" alt=""></div>
+            </div>
+            <div class="serv-content">
+                <div class="serv-block">
+                    <img src="./img/img-5.svg" alt="" class="serv-block__img">
+                    <div class="serv-block__text">Лечение под микроскопом</div>
+                    <div class="serv-block__price">От 6 400 руб</div>
+                </div>
+                <div class="serv-block">
+                    <img src="./img/img-4.svg" alt="" class="serv-block__img">
+                    <div class="serv-block__text">Компьютерная диагностика</div>
+                    <div class="serv-block__price">От 1 500 руб</div>
+                </div>
+                <div class="serv-block">
+                    <img src="./img/img-3.svg" alt="" class="serv-block__img">
+                    <div class="serv-block__text">Лечение дёсен</div>
+                    <div class="serv-block__price">От 500 руб</div>
+                </div>  
+                <div class="serv-block">
+                    <img src="./img/img-7.svg" alt="" class="serv-block__img">
+                    <div class="serv-block__text">Протезирование</div>
+                    <div class="serv-block__price">От 10 000 руб</div>
+                </div>
+                
+                <div class="serv-block">
+                    <img src="./img/img-6.svg" alt="" class="serv-block__img">
+                    <div class="serv-block__text">Имплантация под ключ</div>
+                    <div class="serv-block__price">От 21 000 руб</div>
+                </div>
+                <div class="serv-block">
+                    <img src="./img/img-2.svg" alt="" class="serv-block__img">
+                    <div class="serv-block__text">Установка брекетов</div>
+                    <div class="serv-block__price">От 12 000 руб</div>
+                </div>
+            </div>
+            <div class="serv-content_bottom">
+                <div class="serv-block serv__hide">
+                    <img src="./img/img-1.svg" alt="" class="serv-block__img">
+                    <div class="serv-block__text">Установка виниров</div>
+                    <div class="serv-block__price">От 20 000 руб</div>
+                </div>
+                <div id="back_call" class="serv__contact">
+                    <div class="serv__contact__title">Запишитесь на бесплатный первичный прием врача</div>
+                    <div class="serv__contact__text">На первичном приеме вы познакомитесь с врачом и узнайте точную стоимость лечения</div>
+                    <!-- <div class="serv__contact__btns">
+                        <input id="name_id" type="text" class="serv__contact__input" placeholder="Имя">
+                        <input id="number_id" type="text" class="serv__contact__input" placeholder="+7 (999) 999-99-99">
+                        <button type="submit" class="serv__contact__btn hover">Записаться</button>
+                    </div> -->
+                    <!-- <div onclick="sendEmail('name_id', 'number_id')" class="serv__contact__btn hover">Записаться</div> -->
+                    <form action="mail.php" method="POST" class="serv__contact__btns">
+                        <input id="name_id" name="user_name" type="text" class="serv__contact__input" placeholder="Имя">
+                        <input id="number_id" name="user_phone" type="text" class="serv__contact__input" placeholder="+7 (999) 999-99-99">
+                        <button type="submit" class="serv__contact__btn hover">Записаться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slider main container -->
+    <!-- <div class="swiper"> -->
+        <!-- Additional required wrapper -->
+        <!-- <div class="swiper-wrapper"> -->
+        <!-- Slides -->
+        <!-- <div class="swiper-slide my_photo">Slide 1</div>
+        <div class="swiper-slide my_photo">Slide 2</div>
+        <div class="swiper-slide my_photo">Slide 3</div> -->
+        <!-- ... -->
+        <!-- </div> -->
+        <!-- If we need pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+    
+        <!-- If we need navigation buttons -->
+        <!-- <div class="swiper-button-prev"></div> -->
+        <!-- <div class="swiper-button-next"></div> -->
+    
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+
+
+    <div class="footer">
+        <div class="footer-row">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <img src="./img/teeth.svg" alt="" class="footer-icon">
+                </div>
+                <div class="footer-name">
+                    <div><img src="./img/name.svg" alt="" class="footer_title"></div>
+                    <div class="footer_sub-title"><img src="./img/footer-sub.svg" alt=""></div>
+                </div>
+            </div>
+            <div class="footer-center">
+                <div class="footer-items">
+                    <div class="footer-item">О клинике</div>
+                    <div class="footer-item">Преимущества</div>
+                    <div class="footer-item">Услуги</div>
+                    <div class="footer-item">Специалисты</div>
+                    <div class="footer-item">Отзывы и рейтинг</div>
+                    <div class="footer-item">Фотографии</div>
+                </div>
+            </div>
+            <div class="footer-right">
+                <a href="tel:+78432727184" class="footer-number hover">+7 (843) 272-71-84</a>
+                <div class="footer-call hover">Заказать обратный звонок</div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+      
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+        
+            // If we need pagination
+            pagination: {
+            el: '.swiper-pagination',
+            },
+        
+            // Navigation arrows
+            navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            },
+        
+            // And if we need scrollbar
+            scrollbar: {
+            el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+    
+
+    <!-- <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("fVR3WFl9pLiWO5WBa");
+    })();
+    </script> -->
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
+</body>
+</html>
