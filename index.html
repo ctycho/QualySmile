@@ -4,7 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+
+    <!-- Images -->
+    <link rel="preload" as="image" href="./img/header/mainTeeth.png">
+    <link rel="preload" as="image" href="./img/header/name.svg">
+    <link rel="preload" as="image" href="./img/header/teeth.svg">
+    <!-- Fonts -->
+    <!-- <link rel="preload" as="font" href="./fonts/stolzl_medium.otf">
+    <link rel="preload" as="font" href="./fonts/stolzl_regular.otf">
+    <link rel="preload" as="font" href="./fonts/stolzl_thin.otf">
+    <link rel="preload" as="font" href="./fonts/GoshaSansRegular.otf">
+    <link rel="preload" as="font" href="./fonts/GoshaSansBold.otf"> -->
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=54e61956-31cf-4db7-adb8-7b33cb5d8e6f&lang=ru_RU"></script>
     <title>Qualy smile</title>
@@ -13,10 +24,10 @@
     <div class="topWrapper">
         <div id="header" class="header">
             <div class="headerInfo">
-                <img src="./img/teeth.svg" alt="" class="header-logo">
+                <img src="./img/header/teeth.svg" alt="" class="header-logo">
                 <div class="comapanyName">
-                    <img src="./img/name.svg" alt="" class="header-name">
-                    <img src="./img/header-sub.svg" alt="" class="header-sub">
+                    <img src="./img/header/name.svg" alt="" class="header-name">
+                    <img src="./img/header/header-sub.svg" alt="" class="header-sub">
                 </div>
                 <div class="companyDesc">Центр эстетической стоматологии<br>и имплантологии</div>
             </div>
@@ -24,32 +35,33 @@
             <div id="header__menu" class="header__menu">
                 <div><a href="tel:+78432727184" class="menu__number">+7 (843) 272-71-84</a></div>
                 <ul class="menu__items">
-                    <li onclick="clickMenuItem('header__burger', 'header__menu')"><a href="#about__clinic" class="menu__item">О клинике</a></li>
-                    <li onclick="clickMenuItem('header__burger', 'header__menu')"><a href="#advantage" class="menu__item">Преимущества</a></li>
-                    <li onclick="clickMenuItem('header__burger', 'header__menu')"><a href="#opport" class="menu__item">Возможности</a></li>
-                    <!-- <li><a href="" class="menu__item">Специалисты</a></li>
-                    <li><a href="" class="menu__item">Отзывы</a></li>
+                    <li class="menu__item" onclick="clickMenuItem('header__burger', 'header__menu', 'about__clinic')">О клинике</li>
+                    <li class="menu__item" onclick="clickMenuItem('header__burger', 'header__menu', 'advantage')">Преимущества</li>
+                    <li class="menu__item" onclick="clickMenuItem('header__burger', 'header__menu', 'opport')">Возможности</li>
+                    <li class="menu__item" onclick="clickMenuItem('header__burger', 'header__menu', 'employee')">Специалисты</li>
+                    <!-- <li><a href="" class="menu__item">Отзывы</a></li>
                     <li><a href="" class="menu__item">Рейтинг в отзовиках</a></li>
                     <li><a href="" class="menu__item">Фотографии</a></li> -->
-                    <li onclick="clickMenuItem('header__burger', 'header__menu')"><a href="#services" class="menu__item">Все услуги</a></li>
-                    <li onclick="clickMenuItem('header__burger', 'header__menu')"><a href="#back_call" class="menu__item">Записаться на консультацию</a></li>
+                    <li class="menu__item" onclick="clickMenuItem('header__burger', 'header__menu', 'services')">Все услуги</li>
+                    <li class="menu__item" onclick="clickMenuItem('header__burger', 'header__menu', 'back_call')">Записаться на консультацию</li>
                 </ul>
             </div>
             <div class="headerGradient"></div>
             <div class="headerContact">
                 <a href="tel:+78432727184" class="headerNumber hover">+7 (843) 272-71-84</a>
-                <div class="headerButton hover"><a href="#back_call">Обратный звонок</a></div>
+                <!-- <div class="headerButton hover"><a href="#back_call">Обратный звонок</a></div> -->
+                <div class="headerButton hover" onclick="goTo('back_call')">Обратный звонок</div>
             </div>
         </div>
         <div id="mainBlock" class="mainBlock">
             <div class="mainInfo">
                 <div class="title">Qualy smile - это<br><span>качественное лечение<br>зубов в Казани</span></div>
                 <div class="text">Запишись на бесплатную консультацию<br><span>и получи подробный план лечения зубов<br>от квалифицированных специалистов</span></div>
-                <a href="#back_call" class="signUp">Записаться на консультацию</a>
+                <div class="signUp" onclick="goTo('back_call')">Записаться на консультацию</div>
             </div>
             <div class="mainTeeth">
                 <div class="backGradient"></div>
-                <div class="icon"><img src="./img/mainTeeth.png" alt="" class="main__teeth"></div>
+                <div class="icon"><img src="./img/header/mainTeeth.png" alt="" class="main__teeth"></div>
             </div>
         </div>
     </div>
@@ -64,7 +76,7 @@
     </div>
     <div class="aboutUs">
         <div class="left-side">
-            <img src="./img/office.png" alt="" class="image">
+            <img src="./img/aboutus/office.png" alt="" class="image">
         </div>
         <div class="right-side">
             <div class="aboutus_title">О нашей<br><span>стоматологии</span></div>
@@ -82,7 +94,7 @@
     </div>
     <div id="about__clinic" class="aboutus_mob">
         <div class="aboutus_title">О нашей<span>&nbsp;стоматологии</span></div>
-        <img src="./img/office.png" alt="" class="image">
+        <img src="./img/aboutus/office.png" alt="" class="image">
         <div class="aboutus_text">Qualy smile - это полный спектр стоматологических услуг для тех, кто ценит качество, опыт и высокий уровень сервиса.</div>
         <div class="aboutus_sub-text">Кабинеты оборудованы самым новым и современным оборудованием. У нас работают лучшие специалисты в своей сфере.</div>
         <div class="info-blocks">
@@ -97,7 +109,7 @@
     <div id="advantage" class="advantage">
         <div class="header-one advantage__header">
             <span>Наши преимущества</span>
-            <div class="adv__header-mob-icon"><img src="./img/haf-teeth.png" alt="" class="adv__teeth-mob"></div>
+            <div class="adv__header-mob-icon"><img src="./img/advantage/haf-teeth.png" alt="" class="adv__teeth-mob"></div>
 
         </div>
         <div class="adv-content">
@@ -117,8 +129,8 @@
             </div>
             <div class="adv-column adv-column_center">
                 <div class="adv-img">
-                    <img src="./img/teeth-back.png" alt="" class="adv-back_img">
-                    <img src="./img/зуб.png" alt="" class="adv-teeth_img">
+                    <img src="./img/advantage/teeth-back.png" alt="" class="adv-back_img">
+                    <img src="./img/advantage/зуб.png" alt="" class="adv-teeth_img">
                 </div>
             </div>
             <div class="adv-column">
@@ -137,26 +149,26 @@
             </div>
         </div>
         <div class="adv-btn__wrp">
-            <div class="signUp">Записаться на консультацию</div>
+            <div class="signUp" onclick="goTo('back_call')">Записаться на консультацию</div>
         </div>
     </div>
     <div id="opport" class="opport">
         <div class="header-one">Наши возможности</div>
         <div class="opp-content">
             <div class="opp-block">
-                <img src="./img/image-43.png" alt="" class="opp-img">
+                <img src="./img/opport/image-43.png" alt="" class="opp-img">
                 <div class="opp-block__title">3D томограф</div>
             </div>
             <div class="opp-block">
-                <img src="./img/image-44.png" alt="" class="opp-img">
+                <img src="./img/opport/image-44.png" alt="" class="opp-img">
                 <div class="opp-block__title">Операционный<br>микроскоп</div>
             </div>
             <div class="opp-block">
-                <img src="./img/image-47.png" alt="" class="opp-img">
+                <img src="./img/opport/image-47.png" alt="" class="opp-img">
                 <div class="opp-block__title">Современные<br>имплантационные<br>системы</div>
             </div>
             <div class="opp-block">
-                <img src="./img/image-48.png" alt="" class="opp-img">
+                <img src="./img/opport/image-48.png" alt="" class="opp-img">
                 <div class="opp-block__title">Индивидуальный<br>подход к пациенту</div>
             </div>
         </div>
@@ -166,52 +178,52 @@
         <div class="services">
             <div class="serv-top">
                 <div class="header-one serv-header">Наши услуги</div>
-                <div class="serv-top__all serv__hide">Посмотреть все услуги <img src="./img/serv-arrow.svg" alt=""></div>
+                <!-- <div class="serv-top__all serv__hide">Посмотреть все услуги <img src="./img/serv-arrow.svg" alt=""></div> -->
             </div>
             <div class="serv-content">
                 <div class="serv-block">
-                    <img src="./img/img-5.svg" alt="" class="serv-block__img">
+                    <img src="./img/service/img-5.svg" alt="" class="serv-block__img">
                     <div class="serv-block__text">Лечение под микроскопом</div>
                     <div class="serv-block__price">От 6 400 руб</div>
                 </div>
                 <div class="serv-block">
-                    <img src="./img/img-4.svg" alt="" class="serv-block__img">
+                    <img src="./img/service/img-4.svg" alt="" class="serv-block__img">
                     <div class="serv-block__text">Компьютерная диагностика</div>
                     <div class="serv-block__price">От 1 500 руб</div>
                 </div>
                 <div class="serv-block">
-                    <img src="./img/img-3.svg" alt="" class="serv-block__img">
+                    <img src="./img/service/img-3.svg" alt="" class="serv-block__img">
                     <div class="serv-block__text">Лечение дёсен</div>
                     <div class="serv-block__price">От 500 руб</div>
                 </div>  
                 <div class="serv-block">
-                    <img src="./img/img-7.svg" alt="" class="serv-block__img">
+                    <img src="./img/service/img-7.svg" alt="" class="serv-block__img">
                     <div class="serv-block__text">Протезирование</div>
                     <div class="serv-block__price">От 10 000 руб</div>
                 </div>
                 
                 <div class="serv-block">
-                    <img src="./img/img-6.svg" alt="" class="serv-block__img">
+                    <img src="./img/service/img-6.svg" alt="" class="serv-block__img">
                     <div class="serv-block__text">Имплантация под ключ</div>
                     <div class="serv-block__price">От 21 000 руб</div>
                 </div>
                 <div class="serv-block">
-                    <img src="./img/img-2.svg" alt="" class="serv-block__img">
+                    <img src="./img/service/img-2.svg" alt="" class="serv-block__img">
                     <div class="serv-block__text">Установка брекетов</div>
                     <div class="serv-block__price">От 12 000 руб</div>
                 </div>
             </div>
             <div class="serv-content_bottom">
                 <div class="serv-block serv__hide">
-                    <img src="./img/img-1.svg" alt="" class="serv-block__img">
+                    <img src="./img/service/img-1.svg" alt="" class="serv-block__img">
                     <div class="serv-block__text">Установка виниров</div>
                     <div class="serv-block__price">От 20 000 руб</div>
                 </div>
-                <div id="back_call" class="serv__contact">
-                    <img src="./img/service-teeth.svg" alt="" class="serv__contact_img">
+                <div class="serv__contact">
+                    <img src="./img/service/service-teeth.svg" alt="" class="serv__contact_img">
                     <div class="serv__contact__title">Запишитесь на бесплатный первичный прием врача</div>
                     <div class="serv__contact__text">На первичном приеме вы познакомитесь с врачом и узнайте точную стоимость лечения</div>
-                    <form id="service__form" action="./mail.php" method="post" class="serv__contact__btns">
+                    <form id="serviceForm" class="serv__contact__btns">
                         <input 
                             id="user_name" type="text" name="user_name"
                             onkeypress="return notNumberKey(event)" 
@@ -220,8 +232,112 @@
                             id="user_phone" type="tel" name="user_phone"
                             onkeypress="return onlyNumberKey(event)" 
                             class="serv__contact_input" placeholder="+7 (999) 999-99-99" maxlength="12">
-                        <button type="submit" class="serv__contact__btn hover">Записаться</button>
+                        <button type="button" id="serviceSend" class="serv__contact__btn hover">Записаться</button>
                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="employee" class="employee">
+            <div class="header-one">Наши специалисты</div>
+
+            <div class="swiper">
+
+                <div id="swiper-wrapper__emp" class="swiper-wrapper"></div>
+
+                <div class="swiper-pagination"></div>
+            
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+    </div>
+    
+    <div id="feedback" class="feedback">
+        <div class="feedback__background"></div>
+        <div class="feedback__body">
+            <div class="header-one feedback__index">Отзывы</div>
+            <div class="swiper">
+
+                <div id="feedback__swiper" class="swiper-wrapper"></div>
+
+                <div class="swiper-pagination"></div>
+            
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+            </div>
+        </div>
+    </div>
+    
+    <div id="design" class="design">
+        <div class="header-one">Наш любимый<br><span>интерьер</span></div>
+        <div class="swiper">
+
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="swiper-slide">
+                        <div class="design__block">
+                            <img src="./img/design/IMG_8357.jpg" alt="" class="design__block_img">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide">
+                        <div class="design__block">
+                            <img src="./img/design/IMG_8361.jpg" alt="" class="design__block_img">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide">
+                        <div class="design__block">
+                            <img src="./img/design/IMG_8419.jpg" alt="" class="design__block_img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+        
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+        </div>
+    </div>
+
+    <div id="first" class="first">
+        <div class="first__wrp">
+            <div class="first__block">
+                <div class="first__left">
+                    <div class="header-one serv-header first__title">Первичная консультация</div>
+                    <div class="first__text">Первичное обследование проводится, чтобы собрать необходимую информацию и составить план лечения.</div>
+                    <div class="first__text">Сюда входит визуальный осмотр ротовой полости пациента, чтобы установить:</div>
+                    <ul class="first__list">
+                        <li class="first__item">количество/наличие зубов</li>
+                        <li class="first__item">наличие кариеса, состояние пломб, зубного налета и прочих зубных отложений</li>
+                        <li class="first__item">состояние прикуса</li>
+                        <li class="first__item">состояние пародонта и мягких тканей</li>
+                        <li class="first__item">наличие других заболеваний полости рта</li>
+                        <li class="first__item">выявление острой боли и т.д.</li>
+                    </ul>
+                </div>
+                <div class="first__right">
+                    <div id="back_call" class="serv__contact first__contact">
+                        <div class="first__contact_title">Запишитесь<br><span>на консультацию</span></div>
+                        <div class="first__contact_text">Мы свяжемся с вами в течение<br>30 минут</div>
+                        <form id="mailForm" class="first__btns">
+                            <input 
+                                id="name" type="text" name="name"
+                                onkeypress="return notNumberKey(event)" 
+                                class="serv__contact_input" placeholder="Имя" maxlength="15">
+                            <input 
+                                id="phone" type="tel" name="phone"
+                                onkeypress="return onlyNumberKey(event)" 
+                                class="serv__contact_input" placeholder="+7 (999) 999-99-99" maxlength="12">
+                            <button type="button" id="sendMail" class="serv__contact__btn hover">Записаться</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -261,7 +377,7 @@
             <div class="map__bottom">
                 <div class="map__bottom_title">Мы в социальных сетях</div>
                 <div class="map__bottom_icons">
-                    <a class="map__bottom_icon hover">
+                    <a href="https://instagram.com/qualysmile?igshid=YmMyMTA2M2Y=" target="_blank" class="map__bottom_icon hover">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_112_2188)">
                         <path d="M1.87464 2.04137C-0.482861 4.49012 -0.000361271 7.09137 -0.000361271 14.9939C-0.000361271 21.5564 -1.14536 28.1351 4.84714 29.6839C6.71839 30.1651 23.2984 30.1651 25.1671 29.6814C27.6621 29.0376 29.6921 27.0139 29.9696 23.4851C30.0084 22.9926 30.0084 7.00387 29.9684 6.50137C29.6734 2.74262 27.3596 0.576369 24.3109 0.137619C23.6121 0.036369 23.4721 0.00636903 19.8871 0.00011903C7.17089 0.00636903 4.38339 -0.559881 1.87464 2.04137Z" fill="url(#paint0_linear_112_2188)"/>
@@ -279,7 +395,7 @@
                         </defs>
                         </svg>                            
                     </a>
-                    <a href="https://wa.me/+79274409129" target="_blank" class="map__bottom_icon hover">
+                    <a href="https://wa.me/+79397338010" target="_blank" class="map__bottom_icon hover">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_112_2191)">
                         <path d="M25.9091 0H4.09091C1.83156 0 0 1.83156 0 4.09091V25.9091C0 28.1684 1.83156 30 4.09091 30H25.9091C28.1684 30 30 28.1684 30 25.9091V4.09091C30 1.83156 28.1684 0 25.9091 0Z" fill="#29A71A"/>
@@ -293,7 +409,7 @@
                         </defs>
                         </svg>                            
                     </a>
-                    <a href="https://telegram.me/Di_divanka" target="_blank" class="map__bottom_icon hover">
+                    <a href="https://telegram.me/+79397338010" target="_blank" class="map__bottom_icon hover">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_112_2198)">
                         <path d="M25.9091 0H4.09091C1.83156 0 0 1.83156 0 4.09091V25.9091C0 28.1684 1.83156 30 4.09091 30H25.9091C28.1684 30 30 28.1684 30 25.9091V4.09091C30 1.83156 28.1684 0 25.9091 0Z" fill="#1C8ADB"/>
@@ -311,37 +427,15 @@
         </div>
     </div>
 
-
-    <!-- Slider main container -->
-    <!-- <div class="swiper"> -->
-        <!-- Additional required wrapper -->
-        <!-- <div class="swiper-wrapper"> -->
-        <!-- Slides -->
-        <!-- <div class="swiper-slide my_photo">Slide 1</div>
-        <div class="swiper-slide my_photo">Slide 2</div>
-        <div class="swiper-slide my_photo">Slide 3</div> -->
-        <!-- ... -->
-        <!-- </div> -->
-        <!-- If we need pagination -->
-        <!-- <div class="swiper-pagination"></div> -->
-    
-        <!-- If we need navigation buttons -->
-        <!-- <div class="swiper-button-prev"></div> -->
-        <!-- <div class="swiper-button-next"></div> -->
-    
-        <!-- If we need scrollbar -->
-        <!-- <div class="swiper-scrollbar"></div> -->
-    <!-- </div> -->
-
     <div class="footer">
         <div class="footer-row">
             <div class="footer-left">
                 <div class="footer-logo">
-                    <img src="./img/teeth.svg" alt="" class="footer-icon">
+                    <img src="./img/header/teeth.svg" alt="" class="footer-icon">
                 </div>
                 <div class="footer-name">
-                    <div><img src="./img/name.svg" alt="" class="footer_title"></div>
-                    <div class="footer_sub-title"><img src="./img/footer-sub.svg" alt=""></div>
+                    <div><img src="./img/header/name.svg" alt="" class="footer_title"></div>
+                    <div class="footer_sub-title"><img src="./img/footer/footer-sub.svg" alt=""></div>
                 </div>
             </div>
             <div class="footer-center">
@@ -370,36 +464,11 @@
             <div class="signUp modal__btn" onclick="closeModal()">Понятно</div>
         </div>
     </div>
-
-
-    <script src="./script.js"></script>
-
-    <!-- <script type="module">
-        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
-      
-        const swiper = new Swiper('.swiper', {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-        
-            // If we need pagination
-            pagination: {
-            el: '.swiper-pagination',
-            },
-        
-            // Navigation arrows
-            navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-            },
-        
-            // And if we need scrollbar
-            scrollbar: {
-            el: '.swiper-scrollbar',
-            },
-        });
-    </script> -->
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
+    
+    <script type="module" src="./js/swiper.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/mail.js"></script>
+    <link rel="stylesheet" href="./css/swiper.css">
 </body>
 </html>
